@@ -13,7 +13,7 @@ class SubwayAPIClient:
         # .env에서 키를 가져오되, 없으면 기본 제공되는 'sample' 키 사용
         self.api_key = os.getenv("SUBWAY_API_KEY", "sample")
         # URL 구조: base_url + 시작인덱스/종료인덱스/역이름
-        self.base_url = f"http://swopenapi.seoul.go.kr/api/subway/{self.api_key}/json/realtimeStationArrival/0/5/"
+        self.base_url = f"http://swopenapi.seoul.go.kr/api/subway/{self.api_key}/json/realtimeStationArrival/0/50/"
 
     def get_arrival_info(self, station_name: str) -> list:
         """
